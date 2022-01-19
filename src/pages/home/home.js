@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
+import Header from '../../components/header/header';
 
 export default function Home(){
     const [dados, setDados] = useState({
@@ -94,6 +95,7 @@ export default function Home(){
 
     return(
         <>
+            <Header/>
             <label htmlFor="nome">Nome: </label>
             <input type="text" id="nome" name="nome" defaultValue={dados.nome}/>
             <br/>
