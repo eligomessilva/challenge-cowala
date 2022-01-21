@@ -4,8 +4,7 @@ export default function Validade(){
         var numsStr = string.replace(/[^0-9]/g,'');
         return parseInt(numsStr);
     }
-
-    function teste() {
+    function validar() {
         var data = new Date(document.getElementById('data').value)
         var days = document.getElementById('diasPassados').value;
 
@@ -18,19 +17,15 @@ export default function Validade(){
             alert('Expirado!')
         }
     };
-    
     return(
         <>
             <div className='validade'>
                 <h1>Validade.js</h1>
-
-                <label htmlFor="data">Data: </label>
-                <input type="date" id="data" name="data"/>
-
+                <label htmlFor="data">Data: </label><br/>
+                <input type="date" id="data" name="data"/><br/>
                 <label htmlFor="diasPassados">Dias passados: </label>
-                <input type="text" id="diasPassados" name="diasPassados"/>
-
-                <button onClick={()=>{teste()}}>Teste</button>
+                <input type="text" id="diasPassados" name="diasPassados"/><br/>
+                <button onClick={()=>{validar()}}>Validar</button>
             </div>
         </>
     )

@@ -16,8 +16,6 @@ export default function Fibonnaci(){
         }
         setNumberFibonacci(todoList);
     }
-    
-
     return(
         <>
             <div className='fibonacci'>

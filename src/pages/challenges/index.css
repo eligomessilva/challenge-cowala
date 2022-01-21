@@ -1,0 +1,64 @@
+.bodyLayout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+.card{
+    background-color:#EDEDED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.cardBodyDesafios{
+    margin: 10px;
+    display: flex;
+    height: 100%;
+}
+
+
+.col-1, .col-2{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.fibonacci{
+    padding-bottom: 45px;
+}
+.fibonacci h1, .classificador h1, .faxina h1, .validade h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.fibonacci input, .classificador input, .faxina input, .validade #diasPassados{
+    background-color:  #FFFFFF;
+    border: none;
+    font-size: 20px;
+    height: 30px;
+}
+
+.validade #data{
+    background-color:  #FFFFFF;
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    width: 247px;
+}
+
+.fibonacci button, .classificador button, .faxina button, .validade button{
+    color: white;
+    background-color: #0A1633;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 10px;
+}
+
+

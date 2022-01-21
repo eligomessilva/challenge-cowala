@@ -1,0 +1,126 @@
+.bodyLayout{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+.card{
+    background-color:#EDEDED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.cardBody{
+    margin: 10px;
+}
+#nome, #profissao, #celular, #ip{
+    background-color:  #FFFFFF;
+    border: none;
+    font-size: 20px;
+    height: 44px;
+}
+#nome{
+    width: 100%;
+    padding: 0;
+}
+.secondLine{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.divProfissao{
+    margin-right: 30px;
+}
+#ip{
+    width: 100%;
+}
+.encontrar{
+    color: #0A1633;
+    background-color: #00D9D0;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    cursor: pointer;
+}
+.salvar,.limpar{
+    color: white;
+    background-color: #0A1633;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+.salvar{
+    margin-right: 30px;
+}
+.divSalLim{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.divIP{
+    display: flex;
+    flex-direction: row
+}
+
+.divInputIP{
+    width: 70%;
+    margin-right: 30px;
+}
+
+.divBtnIP{
+    display: flex;
+    align-items: end;
+    width: 30%;
+}
+
+@media only screen and (max-width: 960px) {
+    .divCelular, .divProfissao{
+      width: 100%;
+      margin-right: 0;
+    }
+    .divCelular input, .divProfissao input{
+        width: 100%;
+    }
+    .divCelular{
+        margin-top: 10px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 960px) {
+    .divIP{
+        flex-wrap: wrap;
+    }
+    .divInputIP{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .divBtnIP{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

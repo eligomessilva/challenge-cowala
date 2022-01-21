@@ -5,8 +5,7 @@ export default function Classificador(){
     const [dados, setDados] = useState();
 
     const classificador = () =>{
-        const nome = document.getElementById('nome').value;
-
+        const nome = document.getElementById('nomeUser').value;
         if (window.confirm("É você?")) {
             if (window.confirm("Você é o responsavel?")) {
                 setDadosClassificador(oldArray => [...oldArray, {
@@ -38,41 +37,38 @@ export default function Classificador(){
         }
     }
 
-
     useEffect(() => {
+
         const organizeRespon = dadosClassificador.sort(
             function(a,b){
                return (a.responsavel === b.responsavel) ? 0 : a.responsavel ? -1 : 1
             }
         );
-
         const organizeSouEu = organizeRespon.sort(
             function(a,b){
                return (a.souEu === b.souEu) ? 0 : a.souEu ? -1 : 1
             }
         );
-
-
         setDados(organizeSouEu)
+        
     },[dadosClassificador]);
-
     return(
         <>
             <div className='classificador'>
                 <h1>Classificador.js</h1>
-                <label htmlFor="nome">Nome: </label>
-                <input type="text" id="nome" name="nome"/>
+                <label htmlFor="nome">Nome: </label><br/>
+                <input type="text" id="nomeUser" name="nome"/>
                 <button onClick={()=>{classificador()}}>Adicionar</button>
                  
                 <div style={{marginTop: 15}}>
                     {dados 
                     ?  dados.map((n, index) =>{
                             return(
-                                <div  key={index}>
+                                <div style={{backgroundColor: '#EDEDED', padding: '15px 15px 0 15px'}}  key={index}>
                                     <p style={{margin: 0}}> 
                                         {n.nome} | 
-                                        {n.responsavel ? ' Responsavel |' : ''} 
-                                        {n.souEu ? ' Eu' : ''} 
+                                        {n.responsavel ? ' É Responsavel |' : ' Não responsavel |'} 
+                                        {n.souEu ? ' Sou eu' : ''} 
                                     </p>
                                     <br/>
                                 </div>
